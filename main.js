@@ -13,8 +13,12 @@ function fetchNewAdvice() {
         fetch("https://api.adviceslip.com/advice")
             .then(res => res.json())
             .then(result => {
-                numContainer.innerHTML = `#${result.slip["id"]}`
-                adviceContainer.innerHTML = `"${result.slip["advice"]}"`
+                let id = result.slip["id"];
+                let decoder = new TextDecoder('utf8');
+                let advice = decoder.decode(new TextEncoder().encode(result.slip["advice"]));
+
+                numContainer.innerHTML = `#${id}`
+                adviceContainer.innerHTML = `"${advice}"`
             })
     )
 }
