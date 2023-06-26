@@ -5,14 +5,16 @@
 
 
 const adviceContainer = document.querySelector("#advice")
+const numContainer = document.querySelector("#num")
 const btn = document.querySelector("#btn")
 
-function fetchNewAdvice(result) {
+function fetchNewAdvice() {
     return (
         fetch("https://api.adviceslip.com/advice")
             .then(res => res.json())
             .then(result => {
-                adviceContainer.innerHTML = result.slip["advice"]
+                numContainer.innerHTML = `#${result.slip["id"]}`
+                adviceContainer.innerHTML = `"${result.slip["advice"]}"`
             })
     )
 }

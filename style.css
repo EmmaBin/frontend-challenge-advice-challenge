@@ -6,3 +6,67 @@
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #004263;
+}
+
+.container {
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 10%;
+    border-radius: 25px;
+    min-width: 10rem;
+    /* Adjust as needed */
+    min-height: 10rem;
+    /* Adjust as needed */
+    width: 40%;
+    height: 40%;
+}
+
+#num {
+    margin-bottom: 2rem;
+    ;
+
+}
+
+#btn {
+    background-image: url("./images/icon-dice.svg");
+    background-size: cover;
+    width: 2rem;
+    /* adjust as needed */
+    height: 2rem;
+    /* adjust as needed */
+    border: none;
+    padding: 0;
+    margin-top: 4rem
+}
+
+#advice {
+    font-size: 2rem;
+}
+
+/* For tablets */
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+/* For desktop */
+@media (min-width: 1024px) {
+    .container {
+        margin-top: 10em;
+        width: 40%;
+        height: 40%;
+    }
+}
